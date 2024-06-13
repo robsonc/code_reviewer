@@ -1,0 +1,116 @@
+find_merge_requests_task:
+  description: >
+    Find the most recent merge requests related to the project
+  expected_output: >
+    A list with the most recent merge requests with iid(write iid) and title, related to the project
+
+review_merge_requests_task:
+  description: >
+    Review the most recent merge requests related to the project
+  expected_output: >
+    A revision of the most recent merge requests listed in the previous task
+    Do a detailed review of each merge request, providing feedback on each one
+    
+    ### Steps for Code Review
+
+    1. **Preparation**
+      - Understand the context of the code to be reviewed.
+      - Check the specifications and requirements of the feature or bug fix.
+      - Ensure you have the necessary development environment set up.
+
+    2. **Initial Reading**
+      - Read through the code quickly to get an overview.
+      - Try to understand the purpose of the code and how it fits into the existing codebase.
+
+    3. **Compliance Check**
+      - Ensure the code follows the team's coding conventions.
+      - Check the structure and readability of the code.
+
+    4. **Detailed Analysis**
+      - Examine each part of the code, looking for logical errors, bugs, and inconsistencies.
+      - Assess the clarity and simplicity of the code.
+
+    5. **Testing and Coverage**
+      - Verify if unit tests have been written and executed.
+      - Analyze test coverage to ensure all relevant cases are covered.
+
+    6. **Security and Performance**
+      - Evaluate the code for potential security vulnerabilities.
+      - Check the efficiency of the code and suggest optimizations if necessary.
+
+    7. **Documentation**
+      - Ensure the code is well-documented with clear comments and appropriate technical documentation.
+
+    8. **Constructive Feedback**
+      - Prepare constructive comments and improvement suggestions.
+      - Be specific and explain the reasoning behind your suggestions.
+
+    9. **Discussion with the Author**
+      - If needed, discuss your findings with the code author to clarify any doubts.
+      - Work together with the author to resolve any issues or implement improvements.
+
+create_report_review_task:
+  description: >
+    Create a detailed report review
+  expected_output: >
+    Get the recent reviews and create a detailed report with the main points of each review
+    Follow the format below and change the content accordingly to the reviews provided:
+
+    ### Code Review Report Format and Example
+
+    ---
+
+    **Code Review Report**
+
+    **Date:** [Review Date]  
+    **Reviewer:** [Reviewer's Name]  
+    **Code Author:** [Author's Name]  
+    **Description:** [Brief description of the feature or bug fix]
+
+    ---
+
+    #### General Summary
+    - **Purpose of the Code:** [Brief description of the code's objective]
+    - **Review Summary:** [Summary of main observations]
+
+    #### Review Details
+
+    1. **Compliance with Coding Conventions**
+      - [Comments on adherence to coding conventions]
+
+    2. **Readability and Structure**
+      - [Comments on the clarity, simplicity, and organization of the code]
+
+    3. **Error and Bug Fixes**
+      - [List of errors found and suggestions for correction]
+
+    4. **Testing and Coverage**
+      - **Existence of Tests:** [Yes/No]
+      - **Test Coverage:** [Percentage of coverage]
+      - **Comments on Tests:** [Observations on the adequacy and thoroughness of tests]
+
+    5. **Security**
+      - [Comments on potential security vulnerabilities]
+
+    6. **Performance**
+      - [Observations on the code's efficiency and suggestions for optimization]
+
+    7. **Documentation**
+      - [Comments on the quality and completeness of documentation]
+
+    #### Constructive Feedback
+    - [Constructive comments and suggestions for improvement]
+
+    #### Discussion and Final Actions
+    - [Summary of discussions with the author, if applicable]
+    - **Recommended Actions:** [List of actions the author should take]
+    - **Conclusion:** [Final comment and recommendation for approval or need for additional review]
+
+    ---
+
+    **Reviewer's Signature:**  
+    **Author's Signature:**  
+
+    ---
+
+    This report format helps structure the code review process clearly and thoroughly, facilitating communication and collaboration between reviewers and authors.

@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "code_reviewer"
+version = "0.1.0"
+description = "code-reviewer using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = {extras = ["tools"], version = "^0.30.11"}
+python-gitlab = "^4.6.0"
+
+[tool.poetry.scripts]
+code_reviewer = "code_reviewer.main:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
